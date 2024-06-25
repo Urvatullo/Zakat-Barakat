@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="Zakat_Calculator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="currency-switcher">
+                <label for="currency-select" data-translate="currencyLabel">Currency: </label>
+                <select id="currency-select" class="currency-select">
+                    <option value="USD" data-rate="1">USD</option>
+                    <option value="EUR" data-rate="0.85">EUR</option>
+                    <option value="GBP" data-rate="0.75">GBP</option>
+                    <option value="RUB" data-rate="73.5">RUB</option>
+                    <option value="TJK" data-rate="10.3">TJK</option>
+                </select>
+            </div>
+            <button class="total-zakat" id="total-zakat-button" data-translate="totalZakat">
+                Total Zakat: USD 0.00
+            </button>
+            <button class="transfer-button" id="transfer-button" onclick="window.location.href='funds.html'" data-translate="transferButton">
+                Transfer to Fund
+            </button>
+            <div class="button-group"></div>
+            <div class="language-switcher">
+                <button class="languages" data-lang="en">ENG</button>
+                <button class="languages" data-lang="ru">RUS</button>
+                <button class="languages" data-lang="tj">TJK</button>
+            </div>
+        </div>
+
+        <!-- Gold Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('gold-section')" data-translate="zakatOnGold">Zakat on Gold</button>
+            <div id="gold-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('gold-24')" data-translate="gold24">24 Carat</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('gold-22')" data-translate="gold22">22 Carat</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('gold-18')" data-translate="gold18">18 Carat</button>
+                </div>
+                <div id="gold-24" class="input-section">
+                    <label for="gold-24-input" data-translate="weightGrams">Weight (in Grams)</label>
+                    <input type="number" id="gold-24-input" class="zakat-input" data-rate="1">
+                </div>
+                <div id="gold-22" class="input-section">
+                    <label for="gold-22-input" data-translate="weightGrams">Weight (in Grams)</label>
+                    <input type="number" id="gold-22-input" class="zakat-input" data-rate="0.9167">
+                </div>
+                <div id="gold-18" class="input-section">
+                    <label for="gold-18-input" data-translate="weightGrams">Weight (in Grams)</label>
+                    <input type="number" id="gold-18-input" class="zakat-input" data-rate="0.75">
+                </div>
+            </div>
+        </div>
+
+        <!-- Silver Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('silver-section')" data-translate="zakatOnSilver">Zakat on Silver</button>
+            <div id="silver-section" class="sub-section">
+                <label for="silver-input" data-translate="weightGrams">Weight (in Grams)</label>
+                <input type="number" id="silver-input" class="zakat-input" data-rate="0.8">
+            </div>
+        </div>
+
+        <!-- Cash Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('cash-section')" data-translate="zakatOnCash">Zakat on Cash</button>
+            <div id="cash-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('cash-in-cash')" data-translate="cashInCash">In Cash</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('cash-in-bank')" data-translate="cashInBank">In the Bank</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('cash-in-business-bank')" data-translate="cashInBusinessBank">In the Business Bank</button>
+                </div>
+                <div id="cash-in-cash" class="input-section">
+                    <input type="number" id="cash-amount" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="cash-in-bank" class="input-section">
+                    <input type="number" id="bank-amount" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="cash-in-business-bank" class="input-section">
+                    <input type="number" id="business-bank-amount" class="zakat-input" data-rate="0.025">
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('property-section')" data-translate="zakatOnProperty">Zakat on Property Business</button>
+            <div id="property-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('property-value')" data-translate="propertyValue">Market Value of Properties for Sale</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('property-debt')" data-translate="propertyDebt">Money Owed within 12 Months</button>
+                </div>
+                <div id="property-value" class="input-section">
+                    <input type="number" id="property-value-input" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="property-debt" class="input-section">
+                    <input type="number" id="property-debt-input" class="zakat-input" data-rate="0.025">
+                </div>
+            </div>
+        </div>
+
+        <!-- Shares Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('shares-section')" data-translate="shares">Shares</button>
+            <div id="shares-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('trading-shares')" data-translate="tradingShares">Trading Shares</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('long-term-shares')" data-translate="longTermShares">Shares Held for Long Term</button>
+                </div>
+                <div id="trading-shares" class="input-section">
+                    <input type="number" id="trading-shares-input" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="long-term-shares" class="input-section">
+                    <input type="number" id="long-term-shares-input" class="zakat-input" data-rate="0.025">
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('stock-section')" data-translate="businessWithStock">Business with Stock</button>
+            <div id="stock-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('stock-value')" data-translate="stockValue">Stock Values</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('stock-finance')" data-translate="stockFinance">Finance on Stock within 12 Months</button>
+                </div>
+                <div id="stock-value" class="input-section">
+                    <input type="number" id="stock-value-input" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="stock-finance" class="input-section">
+                    <input type="number" id="stock-finance-input" class="zakat-input" data-rate="0.025">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Zakat_Calculator.js"></script>
+</body>
+</html>
