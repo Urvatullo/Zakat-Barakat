@@ -29,6 +29,9 @@ body {
     margin-bottom: 10px;
     font-size: 18px;
     border: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .transfer-button {
@@ -41,6 +44,7 @@ body {
     cursor: pointer;
     width: 100%;
 }
+
 
 .category {
     margin-top: 20px;
@@ -191,4 +195,36 @@ input[type="number"] {
     font-size: 14px;
     cursor: pointer;
     text-align: center;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 4px 20px;
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+    /*
+    border: 2px solid black;
+    padding: 4px 20px;*/
+}
+
+.fixed-top button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    background-color: #ff7043;
+    color: white;
+    cursor: pointer;
+    border: #008080;
+}
+
+.page-wrapper {
+    padding-top: 50px;
 }

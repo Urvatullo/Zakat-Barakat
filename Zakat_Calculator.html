@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="Zakat_Calculator.css">
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="fixed-top">
+            <button class="total-zakat" id="total-zakat-button" data-translate="totalZakat">
+                Total Zakat: USD 0.00
+            </button>
+        </div>
+    </div>
     <div class="container">
         <div class="header">
             <div class="currency-switcher">
@@ -19,9 +26,6 @@
                     <option value="TJK" data-rate="10.3">TJK</option>
                 </select>
             </div>
-            <button class="total-zakat" id="total-zakat-button" data-translate="totalZakat">
-                Total Zakat: USD 0.00
-            </button>
             <button class="transfer-button" id="transfer-button" onclick="window.location.href='funds.html'" data-translate="transferButton">
                 Transfer to Fund
             </button>
@@ -44,15 +48,15 @@
                 </div>
                 <div id="gold-24" class="input-section">
                     <label for="gold-24-input" data-translate="weightGrams">Weight (in Grams)</label>
-                    <input type="number" id="gold-24-input" class="zakat-input" data-rate="1">
+                    <input type="number"  data-placeholder="gold-24-input" placeholder="24 Carat" id="gold-24-input" class="zakat-input" data-rate="1">
                 </div>
                 <div id="gold-22" class="input-section">
                     <label for="gold-22-input" data-translate="weightGrams">Weight (in Grams)</label>
-                    <input type="number" id="gold-22-input" class="zakat-input" data-rate="0.9167">
+                    <input type="number" data-placeholder="gold-22-input" placeholder="22 Carat" id="gold-22-input" class="zakat-input" data-rate="0.9167">
                 </div>
                 <div id="gold-18" class="input-section">
                     <label for="gold-18-input" data-translate="weightGrams">Weight (in Grams)</label>
-                    <input type="number" id="gold-18-input" class="zakat-input" data-rate="0.75">
+                    <input type="number" data-placeholder="gold-18-input" placeholder="18 Carat" id="gold-18-input" class="zakat-input" data-rate="0.75">
                 </div>
             </div>
         </div>
@@ -76,13 +80,13 @@
                     <button class="sub-category-button" onclick="toggleSubSection('cash-in-business-bank')" data-translate="cashInBusinessBank">In the Business Bank</button>
                 </div>
                 <div id="cash-in-cash" class="input-section">
-                    <input type="number" id="cash-amount" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="cash-amount" placeholder="In Cash" id="cash-amount" class="zakat-input" data-rate="0.025">
                 </div>
                 <div id="cash-in-bank" class="input-section">
-                    <input type="number" id="bank-amount" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="bank-amount" placeholder="In the bank" id="bank-amount" class="zakat-input" data-rate="0.025">
                 </div>
                 <div id="cash-in-business-bank" class="input-section">
-                    <input type="number" id="business-bank-amount" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="business-bank-amount" placeholder="In the Business Bank" id="business-bank-amount" class="zakat-input" data-rate="0.025">
                 </div>
             </div>
         </div>
@@ -96,10 +100,10 @@
                     <button class="sub-category-button" onclick="toggleSubSection('property-debt')" data-translate="propertyDebt">Money Owed within 12 Months</button>
                 </div>
                 <div id="property-value" class="input-section">
-                    <input type="number" id="property-value-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="property-value-input" placeholder="Market Value of Properties for Sale" id="property-value-input" class="zakat-input" data-rate="0.025">
                 </div>
                 <div id="property-debt" class="input-section">
-                    <input type="number" id="property-debt-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="property-debt-input" placeholder="Money Owed within 12 Months" id="property-debt-input" class="zakat-input" data-rate="0.025">
                 </div>
             </div>
         </div>
@@ -113,10 +117,10 @@
                     <button class="sub-category-button" onclick="toggleSubSection('long-term-shares')" data-translate="longTermShares">Shares Held for Long Term</button>
                 </div>
                 <div id="trading-shares" class="input-section">
-                    <input type="number" id="trading-shares-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="trading-shares-input" placeholder="Trading Shares" id="trading-shares-input" class="zakat-input" data-rate="0.025">
                 </div>
                 <div id="long-term-shares" class="input-section">
-                    <input type="number" id="long-term-shares-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="long-term-shares-input" placeholder="Shares Held for Long Term" id="long-term-shares-input" class="zakat-input" data-rate="0.025">
                 </div>
             </div>
         </div>
@@ -130,10 +134,10 @@
                     <button class="sub-category-button" onclick="toggleSubSection('stock-finance')" data-translate="stockFinance">Finance on Stock within 12 Months</button>
                 </div>
                 <div id="stock-value" class="input-section">
-                    <input type="number" id="stock-value-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="stock-value-input" placeholder="Stock Values" id="stock-value-input" class="zakat-input" data-rate="0.025">
                 </div>
                 <div id="stock-finance" class="input-section">
-                    <input type="number" id="stock-finance-input" class="zakat-input" data-rate="0.025">
+                    <input type="number" data-placeholder="stock-finance-input" placeholder="Finance on Stock within 12 Months" id="stock-finance-input" class="zakat-input" data-rate="0.025">
                 </div>
             </div>
         </div>

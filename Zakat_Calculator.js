@@ -89,6 +89,54 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const placeholders = {
+        en: {
+            'gold-24-input': '24 Carat',
+            'gold-22-input': '22 Carat',
+            'gold-18-input': '18 Carat',
+            'silver-input': 'Weight (in Grams)',
+            'cash-amount': 'Amount in Cash',
+            'bank-amount': 'Amount in Bank',
+            'business-bank-amount': 'Amount in Business Bank',
+            'property-value-input': 'Market Value of Properties for Sale',
+            'property-debt-input': 'Money Owed within 12 Months',
+            'trading-shares-input': 'Trading Shares',
+            'long-term-shares-input': 'Shares Held for Long Term',
+            'stock-value-input': 'Stock Values',
+            'stock-finance-input': 'Finance on Stock within 12 Months'
+        },
+        ru: {
+            'gold-24-input': '24 карата',
+            'gold-22-input': '22 карата',
+            'gold-18-input': '18 карата',
+            'silver-input': 'Вес (в граммах)',
+            'cash-amount': 'Сумма наличными',
+            'bank-amount': 'Сумма в банке',
+            'business-bank-amount': 'Сумма в бизнес-банке',
+            'property-value-input': 'Рыночная стоимость недвижимости на продажу',
+            'property-debt-input': 'Деньги, задолженные в течение 12 месяцев',
+            'trading-shares-input': 'Торговые акции',
+            'long-term-shares-input': 'Акции на длительный срок',
+            'stock-value-input': 'Стоимость запасов',
+            'stock-finance-input': 'Финансирование запасов в течение 12 месяцев'
+        },
+        tj: {
+            'gold-24-input': '24 карат',
+            'gold-22-input': '22 карат',
+            'gold-18-input': '18 карат',
+            'silver-input': 'Вазн (дар грамм)',
+            'cash-amount': 'Маблағ дар нақд',
+            'bank-amount': 'Маблағ дар бонк',
+            'business-bank-amount': 'Маблағ дар бонки тиҷоратӣ',
+            'property-value-input': 'Арзиши бозории амвол барои фурӯш',
+            'property-debt-input': 'Пулҳои қарзӣ дар тӯли 12 моҳ',
+            'trading-shares-input': 'Саҳмҳои савдо',
+            'long-term-shares-input': 'Саҳмҳо барои муддати дароз',
+            'stock-value-input': 'Арзишҳои захираҳо',
+            'stock-finance-input': 'Молиякунонии захираҳо дар тӯли 12 моҳ'
+        }
+    };
+
     async function fetchExchangeRates() {
         try {
             const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
@@ -172,6 +220,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const key = element.getAttribute('data-translate');
             element.textContent = translations[lang][key];
         });
+
+        const inputPlaceholders = document.querySelectorAll('[data-placeholder]');
+        inputPlaceholders.forEach(input => {
+            const key = input.getAttribute('data-placeholder');
+            input.placeholder = placeholders[lang][key];
+        });
+
         updateCurrencySymbol();
         transferButton.textContent = `${translations[lang].transferButton} (${currentCurrencySymbol})`;
     }
