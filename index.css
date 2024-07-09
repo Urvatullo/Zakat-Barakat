@@ -209,9 +209,6 @@ input[type="number"] {
     background: white;
     border-radius: 10px;
     margin: auto;
-    /*
-    border: 2px solid black;
-    padding: 4px 20px;*/
 }
 
 .fixed-top button {
@@ -227,4 +224,58 @@ input[type="number"] {
 
 .page-wrapper {
     padding-top: 50px;
+}
+
+.fund {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fund-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.info-button, .donate-button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.info-button {
+    background-color: white;
+    color: #ff7043;
+    border: 2px solid #ff7043;
+}
+
+.donate-button {
+    background-color: #ff7043;
+    color: white;
+}
+
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.currency-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hidden {
+    display: none;
 }

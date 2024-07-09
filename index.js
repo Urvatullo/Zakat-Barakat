@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
             zakatOnProperty: 'Zakat on Property Business',
             shares: 'Shares',
             businessWithStock: 'Business with Stock',
-            gold24: '24 Carat',
-            gold22: '22 Carat',
-            gold18: '18 Carat',
+            gold24: ' 24 Carat',
+            gold22: ' 22 Carat',
+            gold18: ' 18 Carat',
             weightGrams: 'Weight (in Grams)',
             cashInCash: 'In Cash',
             cashInBank: 'In the Bank',
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
             zakatOnProperty: 'Закят на недвижимость',
             shares: 'Акции',
             businessWithStock: 'Бизнес со складскими запасами',
-            gold24: '24 карата',
-            gold22: '22 карата',
-            gold18: '18 карата',
+            gold24: ' 24 карата',
+            gold22: ' 22 карата',
+            gold18: ' 18 карата',
             weightGrams: 'Вес (в граммах)',
             cashInCash: 'В наличных',
             cashInBank: 'В банке',
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
             zakatOnProperty: 'Закот бо амволи ғайриманқул',
             shares: 'Саҳмҳо',
             businessWithStock: 'Бизнес бо захираҳо',
-            gold24: '24 карат',
-            gold22: '22 карат',
-            gold18: '18 карат',
+            gold24: ' 24 карат',
+            gold22: ' 22 карат',
+            gold18: ' 18 карат',
             weightGrams: 'Вазн (дар грамм)',
             cashInCash: 'Дар нақд',
             cashInBank: 'Дар бонк',
@@ -189,6 +189,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalZakatConverted = totalZakatUSD * currentConversionRate;
         totalZakatButton.textContent = `${translations[currentLanguage].totalZakat}${currentCurrencySymbol} ${totalZakatConverted.toFixed(2)}`;
     }
+
+    document.getElementById('transfer-button').addEventListener('click', function () {
+        document.querySelectorAll('.category, .total-zakat, .currency-switcher, .language-switcher').forEach(function (element) {
+            element.style.display = 'none';
+        });
+        document.querySelector('.total-zakat').style.display = 'block';
+        document.querySelector('.language-switcher').style.display = 'flex';
+        document.querySelector('.currency-switcher').style.display = 'flex';
+        document.getElementById('funds-section').classList.remove('hidden');
+    });
 
     function updateCurrencySymbol() {
         currentCurrencySymbol = currencySelect.options[currencySelect.selectedIndex].value;
