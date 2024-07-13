@@ -37,7 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
             tradingShares: 'Trading Shares',
             longTermShares: 'Shares Held for Long Term',
             stockValue: 'Stock Values',
-            stockFinance: 'Finance on Stock within 12 Months'
+            stockFinance: 'Finance on Stock within 12 Months',
+            zakatOnProduce: 'Zakāt on Agricultural Produce',
+            zakatOnLivestock: 'Zakāt on Livestock',
+            weightKgs: 'Weight (in Kgs)',
+            numCattle: 'Number of Cattle',
+            numSheep: 'Number of Sheep',
+            cattle: 'Cattle',
+            sheep: 'Sheep'
         },
         ru: {
             currencyLabel: 'Валюта:',
@@ -61,7 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
             tradingShares: 'Торговые акции',
             longTermShares: 'Акции на длительный срок',
             stockValue: 'Стоимость запасов',
-            stockFinance: 'Финансирование запасов в течение 12 месяцев'
+            stockFinance: 'Финансирование запасов в течение 12 месяцев',
+            zakatOnProduce: 'Закят на сельскохозяйственную продукцию',
+            zakatOnLivestock: 'Закят на скот',
+            weightKgs: 'Вес (в кг)',
+            numCattle: 'Количество голов',
+            numSheep: 'Количество овец',
+            cattle: 'Скот',
+            sheep: 'Овцы'
         },
         tj: {
             currencyLabel: 'Асъор:',
@@ -85,7 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
             tradingShares: 'Саҳмҳои савдо',
             longTermShares: 'Саҳмҳо барои муддати дароз',
             stockValue: 'Арзишҳои захираҳо',
-            stockFinance: 'Молиякунонии захираҳо дар тӯли 12 моҳ'
+            stockFinance: 'Молиякунонии захираҳо дар тӯли 12 моҳ',
+            zakatOnProduce: 'Закот бо маҳсулоти кишоварзӣ',
+            zakatOnLivestock: 'Закот бо чорво',
+            weightKgs: 'Вазн (дар кг)',
+            numCattle: 'Шумораи говҳо',
+            numSheep: 'Шумораи гӯсфандҳо',
+            cattle: 'Гов',
+            sheep: 'Гӯсфанд'
         }
     };
 
@@ -103,7 +124,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'trading-shares-input': 'Trading Shares',
             'long-term-shares-input': 'Shares Held for Long Term',
             'stock-value-input': 'Stock Values',
-            'stock-finance-input': 'Finance on Stock within 12 Months'
+            'stock-finance-input': 'Finance on Stock within 12 Months',
+            'produce-input': 'Weight in Kgs',
+            'cattle-input': 'Number of Cattle',
+            'sheep-input': 'Number of Sheep'
         },
         ru: {
             'gold-24-input': '24 карата',
@@ -118,7 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'trading-shares-input': 'Торговые акции',
             'long-term-shares-input': 'Акции на длительный срок',
             'stock-value-input': 'Стоимость запасов',
-            'stock-finance-input': 'Финансирование запасов в течение 12 месяцев'
+            'stock-finance-input': 'Финансирование запасов в течение 12 месяцев',
+            'produce-input': 'Вес в кг',
+            'cattle-input': 'Количество голов',
+            'sheep-input': 'Количество овец'
         },
         tj: {
             'gold-24-input': '24 карат',
@@ -133,7 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'trading-shares-input': 'Саҳмҳои савдо',
             'long-term-shares-input': 'Саҳмҳо барои муддати дароз',
             'stock-value-input': 'Арзишҳои захираҳо',
-            'stock-finance-input': 'Молиякунонии захираҳо дар тӯли 12 моҳ'
+            'stock-finance-input': 'Молиякунонии захираҳо дар тӯли 12 моҳ',
+            'produce-input': 'Вазн дар кг',
+            'cattle-input': 'Шумораи говҳо',
+            'sheep-input': 'Шумораи гӯсфандҳо'
         }
     };
 

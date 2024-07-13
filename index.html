@@ -151,22 +151,60 @@
             </div>
         </div>
 
+        <!-- Agricultural Produce Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('produce-section')" data-translate="zakatOnProduce">Zakāt on Agricultural Produce</button>
+            <div id="produce-section" class="sub-section">
+                <label for="produce-input" data-translate="weightKgs">Weight (in Kgs)</label>
+                <input type="number" id="produce-input" class="zakat-input" data-rate="0.025">
+            </div>
+        </div>
+
+        <!-- Livestock Section -->
+        <div class="category">
+            <button class="category-button" onclick="toggleSection('livestock-section')" data-translate="zakatOnLivestock">Zakāt on Livestock</button>
+            <div id="livestock-section" class="sub-section">
+                <div class="button-group">
+                    <button class="sub-category-button" onclick="toggleSubSection('cattle')" data-translate="cattle">Cattle</button>
+                    <button class="sub-category-button" onclick="toggleSubSection('sheep')" data-translate="sheep">Sheep</button>
+                </div>
+                <div id="cattle" class="input-section">
+                    <label for="cattle-input" data-translate="numCattle">Number of Cattle</label>
+                    <input type="number" id="cattle-input" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="sheep" class="input-section">
+                    <label for="sheep-input" data-translate="numSheep">Number of Sheep</label>
+                    <input type="number" id="sheep-input" class="zakat-input" data-rate="0.025">
+                </div>
+                <div id="cow" class="input-section">
+                    <label for="sheep-input" data-translate="numSheep">Number of Sheep</label>
+                    <input type="number" id="sheep-input" class="zakat-input" data-rate="0.025">
+                </div>
+            </div>
+        </div>
+
         <!-- Funds Section -->
         <div id="funds-section" class="hidden">
             <div class="fund">
                 <img src="fund_logo.png" alt="Muslim Charity Logo" class="fund-logo">
-                <label class="info-button">Information about fund</label>
-                <button class="donate-button" onclick="window.location.href='fund_donate_1.html'">Donate</button>
+                <div class="fund-actions">
+                    <label class="info-button">Information about fund</label>
+                    <button class="donate-button" onclick="window.location.href='fund_donate_1.html'">Donate</button>
+                </div>
             </div>
             <div class="fund">
                 <img src="fund_logo.png" alt="Muslim Charity Logo" class="fund-logo">
-                <label class="info-button">Information about fund</label>
-                <button class="donate-button" onclick="window.location.href='fund_donate_2.html'">Donate</button>
+                <div class="fund-actions">
+                    <label class="info-button">Information about fund</label>
+                    <button class="donate-button" onclick="window.location.href='fund_donate_1.html'">Donate</button>
+                </div>
             </div>
             <div class="fund">
                 <img src="fund_logo.png" alt="Muslim Charity Logo" class="fund-logo">
-                <label class="info-button">Information about fund</label>
-                <button class="donate-button" onclick="window.location.href='fund_donate_3.html'">Donate</button>
+                <div class="fund-actions">
+                    <label class="info-button">Information about fund</label>
+                    <button class="donate-button" onclick="window.location.href='fund_donate_1.html'">Donate</button>
+                </div>
             </div>
         </div>
     </div>

@@ -238,8 +238,8 @@ input[type="number"] {
 }
 
 .fund-logo {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 130px;
 }
 
 .info-button, .donate-button {
@@ -247,15 +247,15 @@ input[type="number"] {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-left: 10px;
+    margin: 5px 0;
+    width: 80%;
 }
 
 .info-button {
     background-color: white;
     color: #ff7043;
-    border: 2px solid #ff7043;
 }
 
 .donate-button {
@@ -278,4 +278,21 @@ input[type="number"] {
 
 .hidden {
     display: none;
+}
+
+.info-button {
+    background-color: white;
+    color: #008080;
+}
+
+.fund-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #008080;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    max-width: 200px;
+    box-sizing: border-box;
 }
