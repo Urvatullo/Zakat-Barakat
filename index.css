@@ -238,8 +238,8 @@ input[type="number"] {
 }
 
 .fund-logo {
-    width: 180px;
-    height: 150px;
+    width: 150px;
+    height: 130px;
 }
 
 .info-button, .donate-button {
@@ -293,7 +293,7 @@ input[type="number"] {
     border-radius: 10px;
     padding: 10px;
     width: 90%;
-    max-width: 200px;
+    max-width: 180px;
     box-sizing: border-box;
 }
 
