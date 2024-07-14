@@ -167,6 +167,74 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const infoButtons = document.querySelectorAll('.info-btn');
+
+    infoButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const infoText = this.nextElementSibling;
+
+            // Toggle display of the info text
+            if (infoText.style.display === 'block') {
+                infoText.style.display = 'none';
+            } else {
+                infoText.style.display = 'block';
+                positionInfoText(this, infoText);
+            }
+
+            // Close other info texts that are open
+            closeOtherInfoTexts(infoText);
+        });
+    });
+
+    function closeOtherInfoTexts(currentInfoText) {
+        const allInfoTexts = document.querySelectorAll('.info-text');
+        allInfoTexts.forEach(text => {
+            if (text !== currentInfoText && text.style.display === 'block') {
+                text.style.display = 'none';
+            }
+        });
+    }
+
+    function positionInfoText(button, infoText) {
+        const rect = button.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        
+        // Calculate initial position
+        let leftPosition = rect.left + scrollLeft;
+        let topPosition = rect.bottom + scrollTop;
+
+        // Check if info text exceeds right edge of viewport
+        const infoTextWidth = infoText.offsetWidth;
+        const windowWidth = window.innerWidth;
+        const rightEdge = leftPosition + infoTextWidth;
+
+        if (rightEdge > windowWidth) {
+            leftPosition = windowWidth - infoTextWidth;
+        }
+
+        infoText.style.left = `${leftPosition}px`;
+        infoText.style.top = `${topPosition}px`;
+    }
+
+    window.addEventListener('resize', function () {
+        infoButtons.forEach(button => {
+            const infoText = button.nextElementSibling;
+            if (infoText.style.display === 'block') {
+                positionInfoText(button, infoText);
+            }
+        });
+    });
+
+    window.addEventListener('scroll', function () {
+        infoButtons.forEach(button => {
+            const infoText = button.nextElementSibling;
+            if (infoText.style.display === 'block') {
+                positionInfoText(button, infoText);
+            }
+        });
+    });
+
     async function fetchExchangeRates() {
         try {
             const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
