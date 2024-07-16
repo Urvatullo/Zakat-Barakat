@@ -44,7 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
             numCattle: 'Number of Cattle',
             numSheep: 'Number of Sheep',
             cattle: 'Cattle',
-            sheep: 'Sheep'
+            sheep: 'Sheep',
+            donate: 'Donate',
+            zakatfundcharity: 'Zakat Fund is a Russian charitable organization that specializes in collecting and distributing Zakat. The fund aims to help those in need and support various social projects both in Russia and abroad.',
+            insancharity: 'The Insan Charity Fund is dedicated to collecting and distributing Zakat and other forms of charity in Russia. The fund focuses on providing assistance to underprivileged families and supporting educational and social projects.',
+            alabugacharity: 'The Alabuga Charity Fund is engaged in collecting and distributing Zakat and other forms of charity in Russia. The fund provides assistance to needy families and supports educational and social projects.'
         },
         ru: {
             currencyLabel: 'Валюта:',
@@ -75,7 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
             numCattle: 'Количество голов',
             numSheep: 'Количество овец',
             cattle: 'Скот',
-            sheep: 'Овцы'
+            sheep: 'Овцы',
+            donate: 'Пожертвовать',
+            zakatfundcharity: 'Фонд Закят — российская благотворительная организация, которая специализируется на сборе и распределении закята. Целью фонда является помощь нуждающимся и поддержка различных социальных проектов как в России, так и за рубежом.',
+            insancharity: 'Благотворительный фонд «Инсан» занимается сбором и распределением закята и других форм благотворитель- ности в России. Фонд фокусируется на оказании помощи малообеспеченным семьям и поддержке образовательных и социальных проектов.',
+            alabugacharity: 'Благотворительный фонд «Алабуга» занимается сбором и распределением закята и других форм благотворитель- ности в России. Фонд оказывает помощь нуждающимся семьям и поддерживает образовательные и социальные проекты.'
         },
         tj: {
             currencyLabel: 'Асъор:',
@@ -106,8 +114,47 @@ document.addEventListener('DOMContentLoaded', function() {
             numCattle: 'Шумораи говҳо',
             numSheep: 'Шумораи гӯсфандҳо',
             cattle: 'Гов',
-            sheep: 'Гӯсфанд'
-        }
+            sheep: 'Гӯсфанд',
+            donate: 'Xайрия',
+            zakatfundcharity: 'Фонди закот як созмони хайрияи Русия аст, ки ба ҷамъоварӣ ва тақсими закот тахассус дорад. Ҳадафи ин фонд кӯмак ба ниёзмандон ва дастгирии лоиҳаҳои гуногуни иҷтимоӣ дар Русия ва хориҷ аз он аст.',
+            insancharity: 'Фонди хайрияи «Инсан» барои ҷамъоварӣ ва паҳн кардани закот ва дигар шаклҳои хайрия дар Русия бахшида шудааст. Фонд ба расонидани кӯмак ба оилаҳои камбизоат ва дастгирии лоиҳаҳои таълимӣ ва иҷтимоӣ тамаркуз мекунад.',
+            alabugacharity: 'Фонди хайрияи Алабуга ба ҷамъоварӣ ва паҳн кардани закот ва дигар шаклҳои хайрия дар Русия машғул аст. Фонд ба оилаҳои ниёзманд кумак мерасонад ва лоиҳаҳои таълимӣ ва иҷтимоиро дастгирӣ мекунад.'
+        },
+        kz: {
+            currencyLabel: 'Валюта:',
+            totalZakat: 'Жалпы зекет: ',
+            transferButton: 'Қорға аудару',
+            zakatOnGold: 'Алтынның зекеті',
+            zakatOnSilver: 'Күміс зекет',
+            zakatOnCash: 'Қолма-қол зекет',
+            zakatOnProperty: 'Мүлік бизнесінің зекеті',
+            shares: 'Акциялар',
+            businessWithStock: 'Стокпен бизнес',
+            gold24: ' 24 карат',
+            gold22: ' 22 карат',
+            gold18: ' 18 карат',
+            weightGrams: 'Салмақ (грамммен)',
+            cashInCash: 'Қолма-қол ақшамен',
+            cashInBank: 'Банкте',
+            cashInBusinessBank: 'IІскерлік банкте',
+            propertyValue: 'Сатылатын жылжымайтын мүліктің нарықтық құны',
+            propertyDebt: '12 ай ішінде қарыз ақша',
+            tradingShares: 'Саудалық акциялар',
+            longTermShares: 'Ұзақ мерзімді ұсталған акциялар',
+            stockValue: 'акциялық құндылықтар',
+            stockFinance: '12 ай ішінде қордағы қаржыландыру',
+            zakatOnProduce: 'Ауылшаруашылық өнімдерінің зекеті',
+            zakatOnLivestock: 'Мал зекеті',
+            weightKgs: 'Салмақ (Кг)',
+            numCattle: 'Ірі қара мал саны',
+            numSheep: 'Қой саны',
+            cattle: 'мал',
+            sheep: 'Қой',
+            donate: 'Cадақа беру',
+            zakatfundcharity: 'Зекет қоры зекет жинауға және таратуға маманданған ресейлік қайырымдылық ұйымы. Қор Ресейде де, шетелде де мұқтаж жандарға көмек көрсетуге және түрлі әлеуметтік жобаларға қолдау көрсетуге бағытталған.',
+            insancharity: '«Инсан» қайырымдылық қоры Ресейде зекет пен басқа да қайырымдылық түрлерін жинауға және таратуға арналған. Қор аз қамтылған отбасыларға көмек көрсетуге, білім беру және әлеуметтік жобаларды қолдауға бағытталған.',
+            alabugacharity: '«Алабуга» қайырымдылық қоры Ресейде зекет және басқа да қайырымдылық түрлерін жинаумен және таратумен айналысады. Қор аз қамтылған отбасыларға көмек көрсетіп, білім беру және әлеуметтік жобаларды қолдайды.'
+        },
     };
 
     const placeholders = {
@@ -164,7 +211,25 @@ document.addEventListener('DOMContentLoaded', function() {
             'produce-input': 'Вазн дар кг',
             'cattle-input': 'Шумораи говҳо',
             'sheep-input': 'Шумораи гӯсфандҳо'
-        }
+        },
+        kz: {
+            'gold-24-input': '24 карат',
+            'gold-22-input': '22 карат',
+            'gold-18-input': '18 карат',
+            'silver-input': 'Салмақ (грамммен)',
+            'cash-amount': 'қолма-қол ақша сомасы',
+            'bank-amount': 'Банктегі сома',
+            'business-bank-amount': 'Бизнес банкіндегі сома',
+            'property-value-input': 'Сатылатын мүліктің нарықтық құны',
+            'property-debt-input': '12 ай ішінде қарыз ақша',
+            'trading-shares-input': 'Саудалық акциялар',
+            'long-term-shares-input': 'ұзақ мерзімді акциялар',
+            'stock-value-input': 'акция құны',
+            'stock-finance-input': '12 айға арналған қор қаржысы',
+            'produce-input': 'Салмағы кг',
+            'cattle-input': 'бас саны',
+            'sheep-input': 'Қой саны'
+            },
     };
 
     const infoButtons = document.querySelectorAll('.info-btn');
@@ -173,7 +238,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function () {
             const infoText = this.nextElementSibling;
 
-            // Toggle display of the info text
             if (infoText.style.display === 'block') {
                 infoText.style.display = 'none';
             } else {
@@ -181,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 positionInfoText(this, infoText);
             }
 
-            // Close other info texts that are open
             closeOtherInfoTexts(infoText);
         });
     });
@@ -200,11 +263,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
         
-        // Calculate initial position
         let leftPosition = rect.left + scrollLeft;
         let topPosition = rect.bottom + scrollTop;
 
-        // Check if info text exceeds right edge of viewport
         const infoTextWidth = infoText.offsetWidth;
         const windowWidth = window.innerWidth;
         const rightEdge = leftPosition + infoTextWidth;
