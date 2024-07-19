@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const zakatInputs = document.querySelectorAll('.zakat-input');
     const totalZakatButton = document.getElementById('total-zakat-button');
     const transferButton = document.getElementById('transfer-button');
+    const calculateButton = document.getElementById('calculator-button');
     const currencySelect = document.getElementById('currency-select');
     const languageButtons = document.querySelectorAll('.language-switcher button');
     const goldRate24 = 60;
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const translations = {
         en: {
+            calculateButton: 'Calculate Zakat',
             currencyLabel: 'Currency:',
             totalZakat: 'Total Zakat: ',
             transferButton: 'Transfer to Fund',
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alabugacharity: 'The Alabuga Charity Fund is engaged in collecting and distributing Zakat and other forms of charity in Russia. The fund provides assistance to needy families and supports educational and social projects.'
         },
         ru: {
+            calculateButton: 'Рассчитать Закят',
             currencyLabel: 'Валюта:',
             totalZakat: 'Всего закят: ',
             transferButton: 'Перевести в фонд',
@@ -86,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alabugacharity: 'Благотворительный фонд «Алабуга» занимается сбором и распределением закята и других форм благотворитель- ности в России. Фонд оказывает помощь нуждающимся семьям и поддерживает образовательные и социальные проекты.'
         },
         tj: {
+            calculateButton: 'Ҳисоб кардани закот',
             currencyLabel: 'Асъор:',
             totalZakat: 'Ҳамагӣ закот: ',
             transferButton: 'Интиқол бо фонд',
@@ -121,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alabugacharity: 'Фонди хайрияи Алабуга ба ҷамъоварӣ ва паҳн кардани закот ва дигар шаклҳои хайрия дар Русия машғул аст. Фонд ба оилаҳои ниёзманд кумак мерасонад ва лоиҳаҳои таълимӣ ва иҷтимоиро дастгирӣ мекунад.'
         },
         kz: {
+            calculateButton: 'Зекет есепте',
             currencyLabel: 'Валюта:',
             totalZakat: 'Жалпы зекет: ',
             transferButton: 'Қорға аудару',
@@ -231,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'sheep-input': 'Қой саны'
             },
     };
+    
 
     const infoButtons = document.querySelectorAll('.info-btn');
 
@@ -350,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('transfer-button').addEventListener('click', function () {
-        document.querySelectorAll('.category, .total-zakat, .currency-switcher, .language-switcher').forEach(function (element) {
+        document.querySelectorAll('.transfer-button, .category, .total-zakat, .currency-switcher, .language-switcher').forEach(function (element) {
             element.style.display = 'none';
         });
         document.querySelector('.total-zakat').style.display = 'block';
@@ -358,6 +364,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.currency-switcher').style.display = 'flex';
         document.getElementById('funds-section').classList.remove('hidden');
     });
+
+    document.getElementById('calculator-button').addEventListener('click', function () {
+        document.getElementById('funds-section').classList.add('hidden');
+    
+        document.getElementById('calculator-section').classList.remove('hidden');
+    
+        document.querySelectorAll('.transfer-button, .category, .total-zakat, .currency-switcher, .language-switcher').forEach(function (element) {
+            element.style.display = 'block';
+        });
+    });
+    
 
     function updateCurrencySymbol() {
         currentCurrencySymbol = currencySelect.options[currencySelect.selectedIndex].value;
